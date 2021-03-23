@@ -1,0 +1,246 @@
+* {
+    box-sizing: border-box; /* PADDING WIRD NACH INNEN GERECHNET */
+
+}
+
+:root {
+    --primary : rgb(63,43,32,255);
+    --secondary : rgb(26, 26, 26);
+    --thirdfont : rgb(108, 75, 56);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;;
+    font-size: 14px;
+    color: var(--secondary);
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 2px 2px 2px #000;
+}
+
+h2 {
+    text-transform: uppercase;
+    color: var(--thirdfont);
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: var(--thirdfont);
+}
+
+p {
+    line-height: 1.5rem;
+}
+
+/* --- NAVIGATIONS ---  */
+
+ul > li {
+    list-style: none;
+    padding-left: 0;
+}
+
+nav ul li:before {
+    background-image: url(../images/31082.png);
+    background-size: contain;
+    width: 10px;
+    height: 10px;
+    filter: invert(1);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    content: ''; /* muss bei :before und :after Elementen immer definiert werden */
+}
+
+nav ul li:after {
+
+    background-color: #fff;
+    transition: width 300ms;
+    width: 0%;
+    height: 2px;
+    border-radius: 2px;
+    display: block;
+    margin: 0 auto; 
+    content: '';
+}
+
+nav ul li:hover:after {
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    padding-left: 0;
+}
+
+ul > li > a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* --- HEADER --- */
+
+header {
+    display: flex;
+    background-color: var(--primary);
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+}
+
+#header-content {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+ul > li {
+    margin-right: 20px;
+}
+
+nav {
+}
+
+#logo {
+    padding-left: 15px;
+}
+
+
+
+/* --- HEADER IMAGE --- */
+
+#header-img {
+    background-image: url(../images/frontpage.jpg);
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 50px;
+}
+
+/* --- CONTENT BOXES --- */
+
+.boxes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boxes > p {
+    margin:0;
+    text-align: center;
+}
+
+.button {
+    display: table;
+    padding: 10px 15px;
+    background-color: var(--thirdfont);    
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: 20px;
+    transition: all 500ms;
+}
+
+.button:hover {
+    background-color: var(--primary);
+}
+
+/* --- Background IMAGE --- */
+
+#bg-image {
+    background-image: url(../images/hintergrund.jpg);
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+} 
+
+
+/* --- FOOTER --- */
+
+footer {
+    display: flex;
+    background-color: var(--primary);
+    padding: 30px 0;
+}
+
+#footer-menu {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    height: 0;
+}
+
+#footer-menu > p {
+    color: #fff;
+}
+
+/* --- ICONS --- */
+
+i.fas,
+i.fab {
+    font-size: 5rem;
+    color: var(--thirdfont);
+    transition: all 500ms;
+}
+
+i.fas:hover,
+i.fab:hover {
+    transform: rotateZ(-360deg);
+}
+
+
+/* --- MEDIA ANPASSUNGEN ---*/
+
+@media screen and (max-width: 768px) {
+
+    #logo {
+        width: 150px;
+        padding: 20px 0 10px 0;
+    }
+
+    .boxes {
+        padding: 20px;
+    }
+
+    #header-content {
+        flex-direction: column;
+    }
+
+    header {
+        padding: 0;
+    }
+
+    #bg-image {
+        margin: 0;
+    }
+
+    h1 {
+        word-break: break-all;
+    }
+
+}
+
+@media screen and (max-width: 560px) {
+
+    .img-txt .col-4 {
+        order: 2;
+    }
+
+}
