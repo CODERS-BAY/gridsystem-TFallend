@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'lobster';
+    src: url('../fonts/fa-brands-400.woff format') format('400woff'),
+        url('../fonts/fa-brands-400.woff2 format') format('400woff2'),
+        url('../fonts/fa-regular-400.woff') format('400regularwoff'),
+        url('../fonts/fa-regular-400.woff2') format('400regularwoff2'),
+        url('../fonts/fa-solid-900.woff') format('900woff'),
+        url('../fonts/fa-solid-900.woff2') format('900woff2');
+        
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
